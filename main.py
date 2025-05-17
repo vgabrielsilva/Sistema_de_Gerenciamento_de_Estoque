@@ -4,13 +4,9 @@ import subprocess
 import os
 from tkinter import ttk, messagebox
 
-# Caminho para o ícone
 icone_path = os.path.join(os.getcwd(), "icone.ico")
-
-# Caminho para arquivos temporários
 temporario_path = os.path.join(os.getcwd(), "temporario.txt")
 
-# Caminhos para os scripts de inserção, modificação e remoção
 if platform.system() == "Windows":
     insercao_path = os.path.join(os.getcwd(), "Windows", "insercao.bat")
     modificar_path = os.path.join(os.getcwd(), "Windows", "modificar.bat")
@@ -29,7 +25,6 @@ def definir_icone(janela, icone_path):
             janela.tk.call('wm', 'iconphoto', janela._w, icone)
         except Exception as e:
             print(f"Erro ao definir ícone: {e}")
-
 
 def centralizar_janela(janela, lar, alt):
     a = janela.winfo_screenwidth()
@@ -278,5 +273,5 @@ def main():
 
     root.mainloop()
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     main()
